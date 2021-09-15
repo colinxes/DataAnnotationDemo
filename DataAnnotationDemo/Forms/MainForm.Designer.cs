@@ -1,6 +1,6 @@
 ﻿using DataAnnotationDemo.ViewModels;
 
-namespace DataAnnotationDemo
+namespace DataAnnotationDemo.Forms
 {
     partial class MainForm
     {
@@ -41,24 +41,30 @@ namespace DataAnnotationDemo
             this.colBirthDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPlayerPosition = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.toggleSwitchType = new DevExpress.XtraEditors.ToggleSwitch();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItemSwitch = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerViewModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitchType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSwitch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControlPlayer
             // 
             this.gridControlPlayer.DataSource = this.playerViewModelBindingSource;
-            this.gridControlPlayer.Location = new System.Drawing.Point(12, 12);
+            this.gridControlPlayer.Location = new System.Drawing.Point(12, 40);
             this.gridControlPlayer.MainView = this.gridViewPlayer;
             this.gridControlPlayer.Name = "gridControlPlayer";
-            this.gridControlPlayer.Size = new System.Drawing.Size(776, 426);
+            this.gridControlPlayer.Size = new System.Drawing.Size(776, 398);
             this.gridControlPlayer.TabIndex = 0;
             this.gridControlPlayer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPlayer});
@@ -66,7 +72,7 @@ namespace DataAnnotationDemo
             // 
             // playerViewModelBindingSource
             // 
-            this.playerViewModelBindingSource.DataSource = typeof(PlayerViewModel);
+            this.playerViewModelBindingSource.DataSource = typeof(DataAnnotationDemo.ViewModels.PlayerViewModel);
             // 
             // gridViewPlayer
             // 
@@ -126,6 +132,7 @@ namespace DataAnnotationDemo
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.toggleSwitchType);
             this.layoutControl1.Controls.Add(this.gridControlPlayer);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -135,12 +142,26 @@ namespace DataAnnotationDemo
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // toggleSwitchType
+            // 
+            this.toggleSwitchType.Location = new System.Drawing.Point(695, 12);
+            this.toggleSwitchType.Name = "toggleSwitchType";
+            this.toggleSwitchType.Properties.OffText = "Off";
+            this.toggleSwitchType.Properties.OnText = "On";
+            this.toggleSwitchType.Properties.ShowText = false;
+            this.toggleSwitchType.Size = new System.Drawing.Size(93, 24);
+            this.toggleSwitchType.StyleController = this.layoutControl1;
+            this.toggleSwitchType.TabIndex = 4;
+            this.toggleSwitchType.EditValueChanged += new System.EventHandler(this.toggleSwitchType_EditValueChanged);
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItemSwitch,
+            this.emptySpaceItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(800, 450);
@@ -149,11 +170,28 @@ namespace DataAnnotationDemo
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.gridControlPlayer;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(780, 430);
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 402);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItemSwitch
+            // 
+            this.layoutControlItemSwitch.Control = this.toggleSwitchType;
+            this.layoutControlItemSwitch.Location = new System.Drawing.Point(656, 0);
+            this.layoutControlItemSwitch.Name = "layoutControlItemSwitch";
+            this.layoutControlItemSwitch.Size = new System.Drawing.Size(124, 28);
+            this.layoutControlItemSwitch.Text = "Type";
+            this.layoutControlItemSwitch.TextSize = new System.Drawing.Size(24, 13);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(656, 28);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // MainForm
             // 
@@ -171,8 +209,11 @@ namespace DataAnnotationDemo
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitchType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSwitch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,6 +232,9 @@ namespace DataAnnotationDemo
         private DevExpress.XtraGrid.Columns.GridColumn colPassword;
         private DevExpress.XtraGrid.Columns.GridColumn colBirthDate;
         private DevExpress.XtraGrid.Columns.GridColumn colPlayerPosition;
+        private DevExpress.XtraEditors.ToggleSwitch toggleSwitchType;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItemSwitch;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
     }
 }
 

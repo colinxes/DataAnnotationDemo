@@ -1,32 +1,35 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace DataAnnotationDemo
+namespace DataAnnotationDemo.Forms
 {
-    public partial class DataLayout<T> : DevExpress.XtraEditors.XtraForm
+    public partial class GenericForm<T> : DevExpress.XtraEditors.XtraForm
     {
         private readonly T _object;
 
-        public DataLayout(T pObject)
+        public GenericForm(T pObject)
         {
-            _object = pObject;
             InitializeComponent();
+            _object = pObject;
         }
+
+        #region Events
 
         private void DataLayout_Load(object pSender, EventArgs pE)
         {
             InitDataLayout();
         }
 
+        #endregion
+
+        #region Private methods
+
         private void InitDataLayout()
         {
-            dataLayoutControl.DataSource = InitBindingSource();
+            dataLayoutControl.DataSource = new BindingSource() { DataSource = _object };
             dataLayoutControl.RetrieveFields();
         }
 
-        private BindingSource InitBindingSource()
-        {
-            return new BindingSource() { DataSource = _object };
-        }
+        #endregion
     }
 }

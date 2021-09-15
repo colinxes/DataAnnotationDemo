@@ -2,7 +2,7 @@
 
 namespace DataAnnotationDemo.Enums
 {
-    public enum PlayerPositions
+    public enum enmPlayerPositions
     {
         [Display(Name = "Torhüter")]
         Goalkeeper,

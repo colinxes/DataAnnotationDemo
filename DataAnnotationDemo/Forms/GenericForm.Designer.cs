@@ -1,6 +1,6 @@
-﻿namespace DataAnnotationDemo
+﻿namespace DataAnnotationDemo.Forms
 {
-    partial class DataLayout<T>
+    partial class GenericForm<T>
     {
         /// <summary>
         /// Required designer variable.
@@ -53,13 +53,13 @@
             this.layoutControlGroup.Size = new System.Drawing.Size(784, 461);
             this.layoutControlGroup.TextVisible = false;
             // 
-            // DataLayout
+            // GenericForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.dataLayoutControl);
-            this.Name = "DataLayout";
+            this.Name = "GenericForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Spieler bearbeiten";

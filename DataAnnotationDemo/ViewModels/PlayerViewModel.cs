@@ -57,7 +57,7 @@ namespace DataAnnotationDemo.ViewModels
         [Display(Name = "Position",
                 GroupName = "{Tabs}/Spielerdaten"),
          Required(ErrorMessage = "Der Typ des Benutzers ist ein Pflichtfeld."),
-         EnumDataType(typeof(PlayerPositions))]
+         EnumDataType(typeof(enmPlayerPositions))]
         public override int PlayerPosition { get; set; }
     }
 }
