@@ -11,10 +11,7 @@ namespace DataAnnotationDemo.Repositories
         private static PlayerRepository _instance;
         public static PlayerRepository Instance => _instance ?? new PlayerRepository();
 
-        public PlayerRepository()
-        {
-            
-        }
+        private PlayerRepository(){}
 
         public IEnumerable<Player> GetAllUsers()
         {
