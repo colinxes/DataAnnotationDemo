@@ -11,14 +11,11 @@ namespace DataAnnotationDemo.Repositories
         private static PlayerRepository _instance;
         public static PlayerRepository Instance => _instance ?? new PlayerRepository();
 
-        public PlayerRepository()
-        {
-            
-        }
+        private PlayerRepository(){}
 
         public IEnumerable<Player> GetAllUsers()
         {
-            List<Player> Users = new List<Player>
+            List<Player> users = new List<Player>
                 {
                     new Player()
                     {
@@ -29,7 +26,7 @@ namespace DataAnnotationDemo.Repositories
                         Password = "Test",
                         Forname = "Marco", 
                         LastName = "Reus", 
-                        PlayerPosition = (int)PlayerPositions.Striker
+                        PlayerPosition = (int)enmPlayerPositions.Striker
                     },
                     new Player()
                     {
@@ -40,7 +37,7 @@ namespace DataAnnotationDemo.Repositories
                         Password = "Test",
                         Forname = "Thomas", 
                         LastName = "Müller", 
-                        PlayerPosition = (int)PlayerPositions.Striker
+                        PlayerPosition = (int)enmPlayerPositions.Striker
                     },
                     new Player()
                     {
@@ -51,7 +48,7 @@ namespace DataAnnotationDemo.Repositories
                         Password = "Test",
                         Forname = "Lukas", 
                         LastName = "Podolski", 
-                        PlayerPosition = (int)PlayerPositions.Striker
+                        PlayerPosition = (int)enmPlayerPositions.Striker
                     },
                     new Player()
                     {
@@ -61,7 +58,7 @@ namespace DataAnnotationDemo.Repositories
                         Password = "Test",
                         Forname = "Manuel", 
                         LastName = "Neuer", 
-                        PlayerPosition = (int)PlayerPositions.Goalkeeper
+                        PlayerPosition = (int)enmPlayerPositions.Goalkeeper
                     },
                     new Player()
                     {
@@ -71,11 +68,11 @@ namespace DataAnnotationDemo.Repositories
                         Password = "Test",
                         Forname = "Toni", 
                         LastName = "Kroos", 
-                        PlayerPosition = (int)PlayerPositions.Midfield
+                        PlayerPosition = (int)enmPlayerPositions.Midfield
                     }
                 };
 
-                return Users;
+                return users;
         }
 
     }
