@@ -1,9 +1,17 @@
-#OS junk files [Tt]humbs.db *.DS_Store
+#Visual Studio files 
+*.[Oo]bj *.user *.aps *.pch *.vspscc *.vssscc *_i.c *_p.c *.ncb *.suo *.tlb *.tlh *.bak *.[Cc]ache *.ilk *.log *.lib *.sbr *.sdf .pyc .xml ipch/ obj/ [Bb]in [Dd]ebug/ [Rr]elease/ Ankh.NoLoad
 
-#Visual Studio files *.[Oo]bj *.user *.aps *.pch *.vspscc *.vssscc *_i.c *_p.c *.ncb *.suo *.tlb *.tlh *.bak *.[Cc]ache *.ilk *.log *.lib *.sbr *.sdf .pyc .xml ipch/ obj/ [Bb]in [Dd]ebug/ [Rr]elease/ Ankh.NoLoad
+#Resharper files
+*/ .resharper [Tt]est[Rr]esult
 
-#Tooling _ReSharper*/ .resharper [Tt]est[Rr]esult
+#Project files 
+[Bb]uild/
 
-#Project files [Bb]uild/
+#bin folder
+/DataAnnotationDemo/bin
 
-#Subversion files .svn
+#vs folder
+/.vs
+
+#Subversion files 
+.svn
