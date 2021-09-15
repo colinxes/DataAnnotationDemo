@@ -15,7 +15,7 @@ namespace DataAnnotationDemo.Mapper
                 if (_instance != null) return _instance;
 
                 MapperConfiguration config = new MapperConfiguration(
-                    c => { c.CreateMap<Player, PlayerViewModel>(); });
+                    pC => { pC.CreateMap<Player, PlayerViewModel>(); });
 
                 _instance = config.CreateMapper();
 
